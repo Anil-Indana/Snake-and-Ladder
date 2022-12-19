@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.snake_and_ladder.PlayAreaController"
+            prefHeight="400.0" prefWidth="600.0">
+        <children>
+            <ImageView fitHeight="500" fitWidth="500" layoutX="300" >
+                <image>
+                    <Image url="@resources/gameboard.jpg"/>
+                </image>
+            </ImageView>
+            <ImageView fx:id="player1" fitHeight="45" fitWidth="30" layoutX="250" layoutY="450" >
+                <image>
+                    <Image url="@resources/red.png"/>
+                </image>
+            </ImageView>
+            <ImageView fx:id="player2" fitHeight="45" fitWidth="30" layoutX="270" layoutY="450">
+                <image>
+                    <Image url="@resources/blue.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="50" fitWidth="50" layoutX="150" layoutY="150" onMouseClicked="#roll" >
+                <image>
+                    <Image url="@resources/dice.png"/>
+                </image>
+            </ImageView>
+            <Text fx:id="number" layoutY="220" layoutX="170" ></Text>
+            <Text fx:id="changeTurn" layoutY="120" layoutX="140" text = "Player 1's turn"></Text>
+        </children>
+</AnchorPane>
